@@ -1,0 +1,187 @@
+/* Importação da fonte Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300&subset=latin-ext');
+
+/* Estilos gerais do corpo da página */
+body {
+  -webkit-font-smoothing: antialiased; /* Para Safari e Chrome */
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  color: #777;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0;
+  min-height: 100vh;
+  padding: 5%;
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilos para o botão de menu hambúrguer */
+.menu-toggle {
+  display: none; /* Escondido por padrão */
+  background: #360369f3;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+/* Estilos para o título principal (h1) */
+h1 {
+  font-weight: 200;
+  font-size: 2.2rem;
+  color: #222;
+  margin: 0;
+}
+
+/* Estilos para a navegação (nav) */
+nav {
+  margin: 0 auto;
+  max-width: 800px;
+  background: #360369f3;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: #00000026;
+}
+
+nav ul li a:focus {
+  color: white;
+}
+
+/* Estilos para os submenus */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(10, 20, 30, 0.4);
+  min-width: 190px;
+  z-index: 1000;
+}
+
+nav ul li ul li a {
+  background: transparent;
+  color: #555;
+  border-bottom: 1px solid #DDE0E7;
+  padding: 1rem 2rem;
+}
+
+nav ul li ul li a:hover,
+nav ul li ul li a:focus {
+  background: #eee;
+  color: #111;
+}
+
+/* Seta para indicar submenus */
+nav ul li a:not(:only-child)::after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+
+/* Estilos para o rodapé (footer) */
+footer {
+  color: #555;
+  font-size: 12px;
+  margin-inline-end: 5em;
+  text-align: center;
+}
+
+footer a {
+  color: #360369f3;
+  text-decoration: none;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: block; /* Mostra o botão de menu hambúrguer em telas pequenas */
+  }
+
+  nav ul {
+    display: none; /* Esconde o menu de navegação em telas pequenas */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.open { /* Mostra o menu quando o botão é clicado */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ffffff1a;
+  }
+
+  nav ul .submenu {
+    position: static;
+    box-shadow: none;
+  }
+
+  header {
+    flex-direction: column;
+  }
+ 
+}
+#titulo{
+	color:purple;
+}
+#PIT{
+
+	text-decoration: none;
+}
+
+#img{
+  size: 20%;
+}
